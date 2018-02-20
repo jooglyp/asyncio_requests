@@ -1,0 +1,19 @@
+# 3 files:
+# 1) local-aws-management.py
+# 2) aws-client-v1.py
+# 3) rest-api-service-basic-v1.py
+
+# workflow:
+# a) local-aws-management.py contains some general command line and python commands
+# for exploring attributes of an aws ec2 instance, which ideally would be used for executing 
+# aws-client-v1.py. The user needs to ssh into the ec2 and clone a github repo that contains
+# aws-client-v1.py onto the ec2. 
+
+# b) the rest-api-service-basic-v1.py script creates a mock-up rest-api service that will 
+# have requests sent againts it by aws-client-v1.py. The rest-api-service-basic-v1.py script
+# can be executed locally for the sake of this simulation.
+
+# c) after creating the rest-api-service-basic-v1 service, the user proceeds to execute 
+# the aws-client-v1.py code from the ec2 instance's terminal (ssh'd into in step a). The user
+# should verify that all the modules used in aws-client-v1.py (like asyncio) have been
+# pip-installed into the the ec2 python environment
